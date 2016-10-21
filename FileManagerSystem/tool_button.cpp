@@ -1,25 +1,25 @@
-#include "tool_button.h"
+ï»¿#include "tool_button.h"
 
 ToolButton::ToolButton(QString pic_name, QWidget *parent)
 	:QToolButton(parent)
 {
-	//ÉèÖÃÎÄ±¾ÑÕÉ«
+	//è®¾ç½®æ–‡æœ¬é¢œè‰²
 	QPalette text_palette = palette();
 	text_palette.setColor(QPalette::ButtonText, QColor(230, 230, 230));
 	setPalette(text_palette);
 
-	//ÉèÖÃÎÄ±¾´ÖÌå
+	//è®¾ç½®æ–‡æœ¬ç²—ä½“
 	QFont &text_font = const_cast<QFont &>(font());
 	text_font.setWeight(QFont::Bold);
 
 	setToolButtonStyle(Qt::ToolButtonTextUnderIcon);
 
-	//ÉèÖÃÍ¼±ê
+	//è®¾ç½®å›¾æ ‡
 	QPixmap pixmap(pic_name);
 	setIcon(pixmap);
 	setIconSize(pixmap.size());
 
-	//ÉèÖÃ´óĞ¡
+	//è®¾ç½®å¤§å°
 	setFixedSize(pixmap.width()+25, pixmap.height()+27);
 	setAutoRaise(true);
 
@@ -62,7 +62,7 @@ void ToolButton::paintEvent(QPaintEvent *event)
 {
 	if(mouse_over)
 	{
-		//»æÖÆÊó±êÒÆµ½°´Å¥ÉÏµÄ°´Å¥Ğ§¹û
+		//ç»˜åˆ¶é¼ æ ‡ç§»åˆ°æŒ‰é’®ä¸Šçš„æŒ‰é’®æ•ˆæœ
 		painterInfo(0, 100, 150);
 	}
 	else

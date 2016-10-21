@@ -1,4 +1,4 @@
-#ifndef SKIN_WIDGET_H
+ï»¿#ifndef SKIN_WIDGET_H
 #define SKIN_WIDGET_H
 
 #include <QtGui>
@@ -38,8 +38,8 @@ private:
 
 private:
 
-	QString skin_name; //±³¾°Í¼Æ¬
-	bool is_change; //ÊÇ·ñ¸Ä±ä±³¾°
+	QString skin_name; //èƒŒæ™¯å›¾ç‰‡
+	bool is_change; //æ˜¯å¦æ”¹å˜èƒŒæ™¯
 	QStringList skin_list;
 	QStringList tip_list;
 
@@ -47,14 +47,14 @@ private:
 	QGridLayout *center_layout;
 	QHBoxLayout *bottom_layout;
 
-	QPoint move_point; //ÒÆ¶¯µÄ¾àÀë
-	bool mouse_press; //°´ÏÂÊó±ê×ó¼ü
-	QLabel *title_label; //±êÌâ
-	QLabel *title_icon_label; //±êÌâÍ¼±ê
-	PushButton *close_button; //¹Ø±Õ°´Å¥
-	int page_count; //×ÜÒ³Êı
-	int page_count_point; //×îºóÒ»Ò³µÄÏÔÊ¾¸öÊı
-	int current_page; //µ±Ç°ÎªµÚ¼¸Ò³
+	QPoint move_point; //ç§»åŠ¨çš„è·ç¦»
+	bool mouse_press; //æŒ‰ä¸‹é¼ æ ‡å·¦é”®
+	QLabel *title_label; //æ ‡é¢˜
+	QLabel *title_icon_label; //æ ‡é¢˜å›¾æ ‡
+	PushButton *close_button; //å…³é—­æŒ‰é’®
+	int page_count; //æ€»é¡µæ•°
+	int page_count_point; //æœ€åä¸€é¡µçš„æ˜¾ç¤ºä¸ªæ•°
+	int current_page; //å½“å‰ä¸ºç¬¬å‡ é¡µ
 
 	ChangeSkinWidget *change_skin_widget_0;
 	ChangeSkinWidget *change_skin_widget_1;

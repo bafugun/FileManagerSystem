@@ -1,4 +1,4 @@
-#include "main_widget.h"
+ï»¿#include "main_widget.h"
 #include "util.h"
 
 MainWidget::MainWidget(QWidget *parent)
@@ -105,7 +105,7 @@ void MainWidget::showMax()
     }
     else
     {
-		//»ñÈ¡µ±Ç°½çÃæµÄÎ»ÖÃ
+		//è·å–å½“å‰ç•Œé¢çš„ä½ç½®
 		location = this->geometry();
 		this->setGeometry(QApplication::desktop()->availableGeometry());
     }
@@ -119,7 +119,7 @@ void MainWidget::showSkinWidget()
 
 void MainWidget::showMainMenu()
 {
-	//ÉèÖÃÖ÷²Ëµ¥³öÏÖµÄÎ»ÖÃ
+	//è®¾ç½®ä¸»èœå•å‡ºç°çš„ä½ç½®
 	QPoint p = rect().topRight();
 	p.setX(p.x() - 150);
 	p.setY(p.y() + 22);
@@ -130,13 +130,13 @@ void MainWidget::iconIsActived(QSystemTrayIcon::ActivationReason reason)
 {
 	switch(reason)
 	{
-		//µã»÷ÍĞÅÌÍ¼±êÖ®ºóËÉ¿ª
+		//ç‚¹å‡»æ‰˜ç›˜å›¾æ ‡ä¹‹åæ¾å¼€
 	case QSystemTrayIcon::Trigger:
 		{
 			showWidget();
 			break;
 		}    
-		//Ë«»÷ÍĞÅÌÍ¼±ê
+		//åŒå‡»æ‰˜ç›˜å›¾æ ‡
 	case QSystemTrayIcon::DoubleClick:
 		{
 			showWidget();

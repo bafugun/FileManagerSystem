@@ -1,4 +1,4 @@
-#ifndef TOOlBUTTON_H
+ï»¿#ifndef TOOlBUTTON_H
 #define TOOlBUTTON_H
 
 #include <QToolButton>
@@ -23,8 +23,8 @@ protected:
 
 public:
 
-	bool mouse_over; //Êó±êÊÇ·ñÒÆ¹ı
-	bool mouse_press; //Êó±êÊÇ·ñ°´ÏÂ
+	bool mouse_over; //é¼ æ ‡æ˜¯å¦ç§»è¿‡
+	bool mouse_press; //é¼ æ ‡æ˜¯å¦æŒ‰ä¸‹
 };
 
 #endif //TOOlBUTTON_H

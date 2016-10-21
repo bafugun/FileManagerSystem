@@ -1,4 +1,4 @@
-#include "change_skin_widget.h"
+ï»¿#include "change_skin_widget.h"
 
 ChangeSkinWidget::ChangeSkinWidget(QWidget *parent)
 	:QWidget(parent)
@@ -46,14 +46,14 @@ void ChangeSkinWidget::changeSkin(QString pixmap_name, QString skin_name, QStrin
 	QString background_name = pixmap_name + "_big";
 	this->pixmap_name = background_name;
 
-	//¸ü¸ÄÆ¤·ô±³¾°
+	//æ›´æ”¹çš®è‚¤èƒŒæ™¯
 	QPixmap pixmap(background_name);
 	skin_label->setPixmap(pixmap);
 
-	//¸ü¸ÄÆ¤·ôÃû³Æ
+	//æ›´æ”¹çš®è‚¤åç§°
 	skin_name_label->setText(skin_name);
 
-	//¸ü¸ÄÏÂÔØ´ÎÊý
+	//æ›´æ”¹ä¸‹è½½æ¬¡æ•°
 	download_count_label->setText(tr("download count:") + download_count);
 }
 
@@ -61,7 +61,7 @@ void ChangeSkinWidget::paintEvent(QPaintEvent *)
 {
 	if(mouse_enter)
 	{
-		//»æÖÆ±ß¿ò 
+		//ç»˜åˆ¶è¾¹æ¡† 
 		QPainter painter(this);
 		QPen pen(QColor(210, 225, 230)); 
 		painter.setPen(pen); 
@@ -71,7 +71,7 @@ void ChangeSkinWidget::paintEvent(QPaintEvent *)
 
 void ChangeSkinWidget::mousePressEvent(QMouseEvent * event)
 {
-	//Ö»ÄÜÊÇÊó±ê×ó¼üÒÆ¶¯ºÍ¸Ä±ä´óÐ¡
+	//åªèƒ½æ˜¯é¼ æ ‡å·¦é”®ç§»åŠ¨å’Œæ”¹å˜å¤§å°
 	if(event->button() == Qt::LeftButton) 
 	{
 		mouse_press = true;

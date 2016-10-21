@@ -1,4 +1,4 @@
-#include "character_widget.h"
+ï»¿#include "character_widget.h"
 
 CharacterWidget::CharacterWidget(QWidget *parent)
 	:QWidget(parent)
@@ -15,7 +15,7 @@ CharacterWidget::CharacterWidget(QWidget *parent)
 	background_label->setPixmap(QPixmap(":/newCharacter/bg_bottom"));
 	background_label->setGeometry(QRect(0, 0, this->width(), this->height()));
 
-	//½«4ÕÅÍ¼Æ¬ºÏ³ÉÒ»ÕÅ
+	//å°†4å¼ å›¾ç‰‡åˆæˆä¸€å¼ 
 	QPixmap pixmap(QSize(this->width()*WINDOW_PAGE_COUNT, WINDOW_HEIGHT));
 	QPainter painter(&pixmap);
 	for(int i = 0; i < WINDOW_PAGE_COUNT; i++)
@@ -88,7 +88,7 @@ void CharacterWidget::mousePressEvent(QMouseEvent *e)
 			if(current_index > 0)
 			{
 				current_index--;
-				moveCurrentPage(false); //ÓÒÒÆ
+				moveCurrentPage(false); //å³ç§»
 			}
 		}
 	}
@@ -106,42 +106,42 @@ void CharacterWidget::mouseReleaseEvent(QMouseEvent *e)
 
 			xpos = m_mouseDstPos.x() - m_mouseSrcPos.x();
 
-			if(xpos > 0)//ÓÒÒÆ
+			if(xpos > 0)//å³ç§»
 			{
 				if(xpos >= WINDOW_ONEBUTTON_WIDTH)
 				{
 					if(current_index > 0)
 					{
 						current_index--;
-						moveCurrentPage(false); //ÓÒÒÆ
+						moveCurrentPage(false); //å³ç§»
 					}
 					else
 					{
-						moveCurrentPage(true); //×óÒÆ
+						moveCurrentPage(true); //å·¦ç§»
 					}
 				}
 				else
 				{
-					moveCurrentPage(true); //×óÒÆ
+					moveCurrentPage(true); //å·¦ç§»
 				}
 			}
-			else //×óÒÆ
+			else //å·¦ç§»
 			{
 				if(xpos <= -WINDOW_ONEBUTTON_WIDTH)
 				{
 					if(current_index < WINDOW_PAGE_COUNT-1)
 					{
 						current_index++;
-						moveCurrentPage(true); //×óÒÆ
+						moveCurrentPage(true); //å·¦ç§»
 					}
 					else
 					{
-						moveCurrentPage(false); //ÓÒÒÆ
+						moveCurrentPage(false); //å³ç§»
 					}
 				}
 				else
 				{
-					moveCurrentPage(false); //ÓÒÒÆ
+					moveCurrentPage(false); //å³ç§»
 				}
 			}
 
@@ -187,7 +187,7 @@ void CharacterWidget::keyPressEvent(QKeyEvent *e)
 			if(current_index > 0)
 			{
 				current_index--;
-				moveCurrentPage(false); //ÓÒÒÆ
+				moveCurrentPage(false); //å³ç§»
 			}
 			break;
 
@@ -196,7 +196,7 @@ void CharacterWidget::keyPressEvent(QKeyEvent *e)
 			if(current_index < WINDOW_PAGE_COUNT-1)
 			{
 				current_index++;
-				moveCurrentPage(true); //×óÒÆ
+				moveCurrentPage(true); //å·¦ç§»
 			}
 			break;
 
@@ -216,7 +216,7 @@ void CharacterWidget::changeCurrentPage(CLabel *label)
 		}
 	}
 
-	//»ñÈ¡µã»÷µÄÍ¼±êÏÂ±ê
+	//è·å–ç‚¹å‡»çš„å›¾æ ‡ä¸‹æ ‡
 	int index = 0;
 	for(int i=0; i<WINDOW_PAGE_COUNT; i++)
 	{
@@ -227,7 +227,7 @@ void CharacterWidget::changeCurrentPage(CLabel *label)
 		}
 	}
 
-	//ÈôÏÂ±êĞ¡ÓÚµ±Ç°ÏÂ±êÓÒÒÆ£¬·ñÔò×óÒÆ
+	//è‹¥ä¸‹æ ‡å°äºå½“å‰ä¸‹æ ‡å³ç§»ï¼Œå¦åˆ™å·¦ç§»
 	if(index < current_index)
 	{
 		while(index != current_index)
@@ -268,21 +268,21 @@ inline void CharacterWidget::setLabelMove(bool enable)
 
 void CharacterWidget::moveCurrentPage(bool direction)
 {
-	//¸Ä±äµ±Ç°Ò³Ãæ¶ÔÓ¦µÄ°´Å¥
+	//æ”¹å˜å½“å‰é¡µé¢å¯¹åº”çš„æŒ‰é’®
 	changeCurrentButton();
 
-	//Í¼Æ¬µÄ¼¸¸ö·Ö¸îµã
+	//å›¾ç‰‡çš„å‡ ä¸ªåˆ†å‰²ç‚¹
 	//0-680, 680-1360, 1360-2040, 2040-2720
-	//Õæ:Ïò×óÒÆ;  ¼Ù:ÏòÓÒÒÆ
+	//çœŸ:å‘å·¦ç§»;  å‡:å‘å³ç§»
 
-	//×óÒÆµÄ¼¸ÖÖ¿ÉÄÜĞÔ,¶ÔÓÚx×ø±ê
-	//index=0, ½«labelÒÆ¶¯µ½-680*0
-	//index=1, ½«labelÒÆ¶¯µ½-680*1
-	//index=2, ½«labelÒÆ¶¯µ½-680*2
-	//index=3, ½«labelÒÆ¶¯µ½-680*3
+	//å·¦ç§»çš„å‡ ç§å¯èƒ½æ€§,å¯¹äºxåæ ‡
+	//index=0, å°†labelç§»åŠ¨åˆ°-680*0
+	//index=1, å°†labelç§»åŠ¨åˆ°-680*1
+	//index=2, å°†labelç§»åŠ¨åˆ°-680*2
+	//index=3, å°†labelç§»åŠ¨åˆ°-680*3
 	setLabelMove(false);
-	int current_pos_x = total_label->x(); //µ±Ç°label×ø±ê
-	int dest_pos_x = -WINDOW_WIDTH * current_index; //Ä¿±êX×ø±ê
+	int current_pos_x = total_label->x(); //å½“å‰labelåæ ‡
+	int dest_pos_x = -WINDOW_WIDTH * current_index; //ç›®æ ‡Xåæ ‡
 	if(direction)
 	{
 		while(current_pos_x > dest_pos_x)

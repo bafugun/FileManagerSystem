@@ -1,4 +1,4 @@
-#include <QtWidgets>
+ï»¿#include <QtWidgets>
 #include "title_widget.h"
 #include "tool_button.h"
 
@@ -11,23 +11,23 @@ TitleWidget::TitleWidget(QWidget *parent)
     min_button = new PushButton();
     max_button = new PushButton();
     close_button = new PushButton();
-    medal_button = new QPushButton("AAAA");
+    //medal_button = new QPushButton("AAAA");
 
     version_title->setStyleSheet("color:white;");
 
-	//ÉèÖÃÍ¼Æ¬
-    skin_button->loadPixmap(":/sysButton/skin_button");
-	main_menu_button->loadPixmap(":/sysButton/main_menu");
+	//è®¾ç½®å›¾ç‰‡
+    //skin_button->loadPixmap(":/sysButton/skin_button");
+    //main_menu_button->loadPixmap(":/sysButton/main_menu");
 	min_button->loadPixmap(":/sysButton/min_button");
 	max_button->loadPixmap(":/sysButton/max_button");
 	close_button->loadPixmap(":/sysButton/close_button");
     setStyleSheet("background:transparent;");
 
-	QIcon medal_icon(":/contentWidget/medal");
-	medal_button->setIcon(medal_icon);
-	medal_button->setFixedSize(25, 25);
-	medal_button->setIconSize(QSize(25, 25));
-	medal_button->setStyleSheet("background:transparent;");
+    //QIcon medal_icon(":/contentWidget/medal");
+    //medal_button->setIcon(medal_icon);
+    //medal_button->setFixedSize(25, 25);
+    //medal_button->setIconSize(QSize(25, 25));
+    //medal_button->setStyleSheet("background:transparent;");
 
 	connect(skin_button, SIGNAL(clicked()), this, SIGNAL(showSkin()));
 	connect(main_menu_button, SIGNAL(clicked()), this, SIGNAL(showMainMenu()));
@@ -38,7 +38,7 @@ TitleWidget::TitleWidget(QWidget *parent)
     QHBoxLayout *title_layout = new QHBoxLayout();
     title_layout->addWidget(version_title,0,Qt::AlignVCenter);
     title_layout->addStretch();
-	title_layout->addWidget(medal_button, 0, Qt::AlignTop);
+    //title_layout->addWidget(medal_button, 0, Qt::AlignTop);
     title_layout->addWidget(skin_button, 0, Qt::AlignTop);
     title_layout->addWidget(main_menu_button, 0, Qt::AlignTop);
     title_layout->addWidget(min_button, 0, Qt::AlignTop);
@@ -50,8 +50,8 @@ TitleWidget::TitleWidget(QWidget *parent)
 	skin_button->setContentsMargins(0, 0, 10, 0);
 
 	QStringList string_list;
-	string_list<<":/toolWidget/tiJian"<<":/toolWidget/muMa"<<":/toolWidget/louDong"<<":/toolWidget/xiTong"
-		<<":/toolWidget/qingLi"<<":/toolWidget/jiaSu"<<":/toolWidget/menZhen"<<":/toolWidget/ruanJian";
+    string_list<<":/toolWidget/browse"<<":/toolWidget/edit"<<":/toolWidget/search"
+        <<":/toolWidget/Statistics"<<":/toolWidget/settings"<<":/toolWidget/manual";
 
 	QHBoxLayout *button_layout = new QHBoxLayout();
 
@@ -100,14 +100,14 @@ void TitleWidget::translateLanguage()
 	max_button->setToolTip(tr("maximize"));
 	close_button->setToolTip(tr("close"));
 
-	button_list.at(0)->setText(tr("power"));
-	button_list.at(1)->setText(tr("mummy"));
-	button_list.at(2)->setText(tr("hole"));
-	button_list.at(3)->setText(tr("repair"));
-	button_list.at(4)->setText(tr("clear"));
-	button_list.at(5)->setText(tr("optimize"));
-	button_list.at(6)->setText(tr("expert"));
-	button_list.at(7)->setText(tr("software"));
+//	button_list.at(0)->setText(tr("power"));
+//	button_list.at(1)->setText(tr("mummy"));
+//	button_list.at(2)->setText(tr("hole"));
+//	button_list.at(3)->setText(tr("repair"));
+//	button_list.at(4)->setText(tr("clear"));
+//	button_list.at(5)->setText(tr("optimize"));
+//	button_list.at(6)->setText(tr("expert"));
+//	button_list.at(7)->setText(tr("software"));
 }
 
 void TitleWidget::mousePressEvent(QMouseEvent *e)

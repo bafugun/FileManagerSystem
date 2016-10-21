@@ -1,4 +1,4 @@
-#include "filemanagerwindow.h"
+﻿#include "filemanagerwindow.h"
 
 FileManagerWindow::FileManagerWindow(QWidget *parent)
     : QWidget(parent)

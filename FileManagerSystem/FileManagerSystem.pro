@@ -29,7 +29,12 @@ SOURCES += main.cpp\
     title_widget.cpp \
     tool_button.cpp \
     util.cpp \
-    QClassifyByDateWidget.cpp
+    QClassifyByDateWidget.cpp \
+    QShowResultWidget.cpp \
+    QShowStaticWidget.cpp \
+    QResultWidget.cpp \
+    QOperateWidget.cpp \
+    QFileManagerMainWindow.cpp
 
 HEADERS  += filemanagerwindow.h \
     main_widget.h \
@@ -47,7 +52,15 @@ HEADERS  += filemanagerwindow.h \
     title_widget.h \
     tool_button.h \
     util.h \
-    QClassifyByDateWidget.h
+    QClassifyByDateWidget.h \
+    QShowResultWidget.h \
+    QShowStaticWidget.h \
+    QResultWidget.h \
+    QOperateWidget.h \
+    QFileManagerMainWindow.h
 
 RESOURCES += \
     QRC.qrc
+
+FORMS += \
+    UI/showResultWidget.ui

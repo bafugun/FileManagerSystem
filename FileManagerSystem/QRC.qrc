@@ -1,4 +1,4 @@
-<RCC>
+﻿<RCC>
     <qresource prefix="/sysButton">
         <file alias="skin_button">img/sysButton/skin_button.png</file>
         <file alias="main_menu">img/sysButton/main_menu.png</file>
@@ -8,18 +8,15 @@
         <file alias="close">img/sysButton/close.png</file>
     </qresource>
     <qresource prefix="/img">
-    <file alias="logo">img/logo.png</file>
+        <file alias="logo">img/logo.png</file>
     </qresource>
-  
     <qresource prefix="/toolWidget">
-        <file alias="jiaSu">img/toolWidget/jiaSu.png</file>
-        <file alias="louDong">img/toolWidget/louDong.png</file>
-        <file alias="menZhen">img/toolWidget/menZhen.png</file>
-        <file alias="muMa">img/toolWidget/muMa.png</file>
-        <file alias="qingLi">img/toolWidget/qingLi.png</file>
-        <file alias="ruanJian">img/toolWidget/ruanJian.png</file>
-        <file alias="tiJian">img/toolWidget/tiJian.png</file>
-        <file alias="xiTong">img/toolWidget/xiTong.png</file>
+        <file alias="browse">img/toolWidget/browse.PNG</file>
+        <file alias="edit">img/toolWidget/edit.PNG</file>
+        <file alias="manual">img/toolWidget/manual.PNG</file>
+        <file alias="search">img/toolWidget/search.PNG</file>
+        <file alias="settings">img/toolWidget/settings.PNG</file>
+        <file alias="Statistics">img/toolWidget/Statistics.PNG</file>
     </qresource>
     <qresource prefix="/qm">
         <file>qt_zh_CN.qm</file>
